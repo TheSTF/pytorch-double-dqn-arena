@@ -49,7 +49,7 @@ python -m venv .venv
 # Windows : .venv\Scripts\activate | Mac/Linux : source .venv/bin/activate
 pip install -r requirements.txt
 
-### 2. Enregistrer le GIF de démonstration et lancer les tests
+### Enregistrer le GIF de démonstration et lancer les tests
 ```bash
 # Générer assets/demo_arena.gif (6 épisodes déterministes)
 python -m scripts.play_arena --record
