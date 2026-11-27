@@ -1,10 +1,15 @@
 # Double DQN Navigation Agent (PyTorch & Pygame)
 
 Implémentation modulaire **from scratch** d'un agent de Deep Reinforcement Learning (**DQN / Double DQN**) en PyTorch, validé sur une grille de référence puis déployé dans une arène 2D Pygame comportant des murs internes et des obstacles mortels.
-
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20RL-ee4c2c)
 ![Pygame](https://img.shields.io/badge/Pygame-2D%20Simulation-green)
+![Tests](https://img.shields.io/badge/Tests-pytest%20(8%20passing)-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+<p align="center">
+  <img src="assets/demo_arena.gif" alt="Démo de l'agent Double DQN dans l'arène Pygame" width="460"/>
+</p>
 
 ## Aperçu & Résultats
 
@@ -43,3 +48,11 @@ cd pytorch-double-dqn-arena
 python -m venv .venv
 # Windows : .venv\Scripts\activate | Mac/Linux : source .venv/bin/activate
 pip install -r requirements.txt
+
+### 2. Enregistrer le GIF de démonstration et lancer les tests
+```bash
+# Générer assets/demo_arena.gif (6 épisodes déterministes)
+python -m scripts.play_arena --record
+
+# Exécuter la suite de tests unitaires
+pytest -v
